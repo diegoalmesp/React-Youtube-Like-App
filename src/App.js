@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 
 import MyAppNavbar from './components/MyAppNavbar';
 import MyAppAside from './components/MyAppAside';
