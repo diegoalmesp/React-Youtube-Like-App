@@ -5,16 +5,10 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  // NavItem,
-  // NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  // Form,
-  // FormGroup,
-  // Button,
-  // Input
 } from 'reactstrap';
 
 import BrandImage from './common/BrandImage';
