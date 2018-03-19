@@ -13,13 +13,12 @@ const VideoCard = (props) => {
 
   return (
     <Fragment>
-      <Card onClick={onClick} style={{cursor: 'pointer'}}>
+      <Card onClick={onClick} className="mb-2" style={{cursor: 'pointer'}}>
         <CardImg top width="100%" src={elem.thumbnail} alt="Video thumbnail" />
         <CardBody>
           <CardText>{elem.title}</CardText>
         </CardBody>
       </Card>
-      <hr />
     </Fragment>
   );
 }

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Card,
@@ -14,8 +15,9 @@ const video = {
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 };
 
-class MyAppAside extends Component {
+class MyAppSelected extends Component {
   render() {
+    const video = this.props.video;
     return (
       <Fragment>
         <Card style={{cursor: 'pointer'}}>
@@ -35,4 +37,12 @@ class MyAppAside extends Component {
   }
 }
 
-export default MyAppAside;
+MyAppSelected.propTypes = {
+  video: PropTypes.object.isRequired
+}
+
+MyAppSelected.defaultProps = {
+  video: video
+}
+
+export default MyAppSelected;

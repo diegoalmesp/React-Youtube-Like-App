@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import VideoCard from './VideoCard';
 
 const videos = [
@@ -14,15 +15,24 @@ class MyAppAside extends Component {
   }
 
   render() {
+    const videos = this.props.videos;
     return (
       <Fragment>
-        <h4>Video List</h4>
+        <h6>Video List</h6>
         {videos.map((elem, i) => {
           return <VideoCard elem={elem} key={i} onClick={this.onCardClick} />
         })}
       </Fragment>
     );
   }
+}
+
+MyAppAside.propTypes = {
+  videos: PropTypes.array.isRequired
+}
+
+MyAppAside.defaultProps = {
+  videos: videos
 }
 
 export default MyAppAside;

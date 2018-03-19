@@ -1,1 +1,1 @@
-This is a create-react-app example, with reactrap, redux & jest
+This is a create-react-app example, with reactsrap (Bootstrap), redux & jest
