@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-
+import headShake from 'react-animations/lib/head-shake';
+import Radium, {StyleRoot} from 'radium';
 import {
   Card,
   CardImg,
@@ -8,18 +9,31 @@ import {
   CardBody,
 } from 'reactstrap';
 
+const styles = {
+  headShake: {
+    cursor: 'pointer',
+    ':hover': {
+      animation: 'x 1s',
+      animationName: Radium.keyframes(headShake, 'headShake')
+    }
+  }
+}
+
+
 const VideoCard = (props) => {
   const { elem, onClick } = props;
 
   return (
-    <Fragment>
-      <Card onClick={onClick} className="mb-2" style={{cursor: 'pointer'}}>
-        <CardImg top width="100%" src={elem.thumbnail} alt="Video thumbnail" />
-        <CardBody>
-          <CardText>{elem.title}</CardText>
-        </CardBody>
-      </Card>
-    </Fragment>
+    <StyleRoot>
+      <div style={styles.headShake}>
+        <Card onClick={onClick} className="mb-2">
+          <CardImg top width="100%" src={elem.thumbnail} alt="Video thumbnail" />
+          <CardBody>
+            <CardText>{elem.title}</CardText>
+          </CardBody>
+        </Card>
+      </div>
+    </StyleRoot>
   );
 }
 
