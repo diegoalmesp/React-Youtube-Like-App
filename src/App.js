@@ -28,7 +28,6 @@ class App extends Component {
   }
 
   handleSelectVideo = (id) => {
-    console.log(id);
     let selectedVideo = videos.find(video => video._id === id);
     this.setState({ selectedVideo: selectedVideo });
   }
