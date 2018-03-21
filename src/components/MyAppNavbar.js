@@ -3,8 +3,10 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
+  // NavbarBrand,
   Nav,
+  NavItem,
+  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -34,9 +36,12 @@ class MyAppNavbar extends Component {
     return (
       <div>
         <Navbar color="faded" light expand="md">
-          <NavbarBrand href="/">
+          {/*<NavbarBrand href="/">
             <BrandImage />
-          </NavbarBrand>
+          </NavbarBrand>*/}
+          <Link to="/">
+            <BrandImage />
+          </Link>
 
           <NavbarToggler onClick={this.toggle} />
 
