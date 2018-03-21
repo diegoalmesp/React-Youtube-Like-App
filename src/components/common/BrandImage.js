@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const BrandImage = (props) => {
   const { logoWidth, logoImage } = props;
 
-  return <img width={logoWidth} src={logoImage} alt="The brand logo" />
+  return (
+    <Link to="/">
+      <img width={logoWidth} src={logoImage} alt="The brand logo" />
+    </Link>
+  )
 }
 
 BrandImage.defaultProps = {

@@ -10,6 +10,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 import BrandImage from './common/BrandImage';
 import NavbarFilter from './common/NavbarFilter';
@@ -58,18 +59,18 @@ class MyAppNavbar extends Component {
               </NavItem>*/}
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  Navigation
                 </DropdownToggle>
                 <DropdownMenu >
                   <DropdownItem>
-                    Option 1
+                    <Link to="/">Home</Link>
                   </DropdownItem>
                   <DropdownItem>
                     Option 2
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    <Link to="/about">About</Link>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
